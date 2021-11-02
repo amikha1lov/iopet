@@ -1,0 +1,172 @@
+@import "normalize.css";
+@import "fonts.css";
+@import "vars.css";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    border: none;
+}
+.page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    ". .";
+    font-family: var(--font-regular);
+}
+
+.page__cover {
+    background-color: #00C17E;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.page__content {
+    padding: 50px;
+}
+
+.content-page {
+
+}
+
+
+
+.main-banner {
+    background-color:var(--accent-color);
+    height: 272px;
+    border-radius: 5px;
+    padding: 31px 45px;
+    position: relative;
+}
+.main-banner:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url('../img/banner_bubbles.png');
+    background-size: cover;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.main-banner__title {
+    font-family: var(--font-semibold);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: relative;
+    max-width: 440px;
+}
+.main-banne__descr {
+    font-family: var(--font-regular);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+.main-banner__form {
+    margin-top: 31px;
+    position: relative;
+}
+
+.main-banner__form input[name='email'] {
+    padding: 13px 25px;
+    background: transparent;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    border: none;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px 0px 0px 5px;
+}
+.main-banner__form input[type='submit'] {
+    font-family: var(--font-semibold);
+    padding: 8px 25px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 29px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #B69BEC;
+    cursor: pointer;
+    border-radius: 0px 5px 5px 0px;
+    margin-left: -4px;
+}
+.main-banner__form input[name='email']:focus {
+    outline: 1px solid #f3f3f3;
+}
+
+
+.main-banner__form input[name='email']::placeholder {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
+.form-banner__policy {
+    margin-top: 16px;
+    display: flex;
+    max-width: 300px;
+}
+.form-banner__policy label{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(255,255,255,0.7);
+    max-width: 262px;
+    display: block;
+    position: relative;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.form-banner__policy span{
+
+}
+
+.form-banner__policy label:before{
+    content: '';
+    display: block;
+    width:15px;
+    height: 15px;
+    opacity: 0.7;
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    position: absolute;
+    left: -30px;
+    top: 0px;
+}
+.form-banner__policy label:after{
+    content: '';
+    display: block;
+    width:5px;
+    height: 5px;
+    background-color: transparent;
+    border-radius: 5px;
+    position: absolute;
+    left: -24px;
+    top: 6px;
+}
+.form-banner__policy input {
+    opacity: 0;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+}
+.form-banner__policy input:checked + label:after {
+    background: #FFFFFF;
+}
